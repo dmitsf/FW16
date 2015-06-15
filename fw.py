@@ -17,7 +17,7 @@ def run(m, n, j0=0):
             d[i][j] = min(d[i][j], d[i][k] + d[k][j])
         k += 1
 
-    return d
+    return d if not j0 else d[0][j0]
 
 
 if __name__ == '__main__':
@@ -28,4 +28,8 @@ if __name__ == '__main__':
     print "Matrix:\n", printmatrix(m)
     an = run(m, n)
     print "Result:\n", printmatrix(an)
+    j0 = int(raw_input())
+    print "Result for j0=%d: %d" % (j0, run(m, n, j0=3))
+
+
 
