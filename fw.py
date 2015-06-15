@@ -29,7 +29,7 @@ if __name__ == '__main__':
     an = run(m, n)
     print "Result:\n", printmatrix(an)
     j0 = int(raw_input())
-    print "Result for j0=%d: %d" % (j0, run(m, n, j0=3))
+    print "Result for j0=%d: %d" % (j0, run(m, n, j0=j0))
 
 
 
