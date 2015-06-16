@@ -8,7 +8,7 @@ randmatrix = lambda m, n: map(lambda x: map(lambda y: x!=y and rn(n) or 0, xrang
 printmatrix = lambda m: '\n'.join(map(lambda x: "".join(map(lambda y: FORM % y, x)), m))
 
 
-def run(m, n, j0=0):
+def run(m, n, j0=-1):
 
     d = dc(m)
     k = 0
@@ -17,7 +17,7 @@ def run(m, n, j0=0):
             d[i][j] = min(d[i][j], d[i][k] + d[k][j])
         k += 1
 
-    return d if not j0 else d[0][j0]
+    return d if j0==-1 else d[0][j0]
 
 
 if __name__ == '__main__':
