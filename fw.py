@@ -12,10 +12,10 @@ def run(m, n, j0=-1):
 
     d = dc(m)
     k = 0
-    while k < n:
+    while k < n - 1:
+        k += 1
         for i, j in cp(xrange(n), xrange(n)):
             d[i][j] = min(d[i][j], d[i][k] + d[k][j])
-        k += 1
 
     return d if j0==-1 else d[0][j0]
 
