@@ -13,7 +13,7 @@ def run(m, n, j0=-1):
     d = dc(m)
     k = 0
     while k < n:
-        for i, j in cp(xrange(n), xrange(n)):
+        for i, j in cp(xrange(n), repeat=2):
             d[i][j] = min(d[i][j], d[i][k] + d[k][j])
         k += 1 
 
